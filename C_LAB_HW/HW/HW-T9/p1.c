@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// Simple_Struct_Product
 typedef struct st_product{
 	char     *name;
 	int      price;
