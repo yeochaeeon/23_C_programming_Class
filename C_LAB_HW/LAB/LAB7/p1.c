@@ -12,7 +12,7 @@ int get_kth_largest(int *nums, int k) {
 
     if (k < 1 || k > cnt) return -1;
 
-    else { // Descending order.
+    else { // Descending order
         for(int i = 0; i < cnt -1; i++){
             for (int j = 0; j < cnt - 1 - i; j++){
                 if (nums[j] < nums[j+1]) {
