@@ -25,7 +25,7 @@ TimePeriod detect_schedule_conflict(struct tm *start1, struct tm *end1,
                                     struct tm *start2, struct tm *end2) {
 	//Implement your code
 	TimePeriod overlap;
-	if (difftime(mktime(end1), mktime(start2))> 0 &&  difftime(mktime(end2), mktime(start1))> 0){
+	if (difftime(mktime(end1), mktime(start2))> 0 &&  difftime(mktime(end2), mktime(start1))> 0) {
 		overlap.start= *start2; 
 		overlap.end  = *end1;
 	} 
@@ -34,8 +34,8 @@ TimePeriod detect_schedule_conflict(struct tm *start1, struct tm *end1,
 	}
 	return overlap;
 	
-	// start1     end1
-	// 		start2         end2 
+	// start1------------end1
+	//---------start2------------end2 
 }
 
 void print_time(struct tm *t) {
@@ -45,7 +45,7 @@ void print_time(struct tm *t) {
 void print_schedule_conflict(TimePeriod *overlap) {
 	if (overlap->start.tm_year != 0) { 
 		printf("Schedule conflict detected on %04d-%02d-%02d between ",
-					 overlap->start.tm_year + 1900, overlap->start.tm_mon + 1, overlap->start.tm_mday);
+					overlap->start.tm_year + 1900, overlap->start.tm_mon + 1, overlap->start.tm_mday);
 		print_time(&overlap->start);
 		printf(" and ");
 		print_time(&overlap->end);
