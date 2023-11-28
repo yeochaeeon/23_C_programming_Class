@@ -25,8 +25,23 @@ void stud_bubble_sort(STUD * pnucse) {
 			}
 		}
 	}
+	return;
     
-    
+	//error
+    // int len = 7;
+	// STUD tmp;
+
+	// for (int i = 0; i < len -1 ; i++) {
+	// 	for (int j = 0; j < len - i-1; j++) {
+	// 		if (pnucse[j].points > pnucse[j+1].points){
+	// 			tmp = pnucse[j] ;
+	// 			pnucse[j] = pnucse[j+1];
+	// 			pnucse[j+1] = tmp;
+	
+	// 		}
+	// 	}
+	// }
+	
 }
 
 
