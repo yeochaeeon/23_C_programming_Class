@@ -9,7 +9,7 @@ void print_local_time_after_kdays(time_t t, int k) {
 
     char* day[7] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 	// char * day[7] == double array 
-    printf("%d/%d/%d, %02d:%02d:%02d, %s\n", time->tm_year+1900, time->tm_mon + 1, time->tm_mday+1, time->tm_hour,time->tm_min, time->tm_sec, day[time->tm_wday]);
+    printf("%d/%d/%d, %02d:%02d:%02d, %s\n", time->tm_year+1900, time->tm_mon + 1, time->tm_mday, time->tm_hour,time->tm_min, time->tm_sec, day[time->tm_wday]);
 
     return;
 }
